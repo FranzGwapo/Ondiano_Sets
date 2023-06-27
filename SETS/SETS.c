@@ -38,23 +38,23 @@ bool removeElement(Set *s, int item){
 void displaySet(Set s){
 	int i;
 	printf("SET DATA\n{ ");
-//	for(i=0;i<MAX;++i){
-//		if(s.elem[i]){
-//			printf("%d ", i);
-//		}
-//		else{
-//			
-//		}	
-//	}
-
 	for(i=0;i<MAX;++i){
-		if(s.elem[i]==true){
-			printf("1 ");
+		if(s.elem[i]){
+			printf("%d ", i);
 		}
 		else{
-			printf("0 ");
-		}
+			
+		}	
 	}
+	//To print all true(1) and false(0)
+//	for(i=0;i<MAX;++i){
+//		if(s.elem[i]==true){
+//			printf("1 ");
+//		}
+//		else{
+//			printf("0 ");
+//		}
+//	}
 	printf("}\n");
 }
 
@@ -106,7 +106,7 @@ Set symmetricDiffSet(Set a, Set b){
 	Set unSet = newSet();
 	int i;
 	for(i=0;i<MAX;++i){
-		if(!a.elem[i]&b.elem[i]){
+		if((!a.elem[i]&b.elem[i])|(!b.elem[i]&a.elem[i])){
 			unSet.elem[i] = true;
 			unSet.count++;
 		}

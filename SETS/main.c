@@ -118,15 +118,18 @@ int main(int argc, char *argv[]) {
 				scanf(" %c", &setchoice);
 				if(setchoice == 'a'){
 					cardinal = cardinality(a);
-					printf("Cardinality: %d\n\n", cardinal);
+					printf("Cardinality of set %c: %d\n\n", setchoice, cardinal);
 				}
 				else if(setchoice == 'b'){
 					cardinal = cardinality(b);
-					printf("Cardinality: %d\n\n", cardinal);
+					printf("Cardinality of set %c: %d\n\n", setchoice, cardinal);
 				}
 				else if(setchoice == 'c'){
 					cardinal = cardinality(c);
-					printf("Cardinality: %d\n\n", cardinal);
+					printf("Cardinality of set %c: %d\n\n", setchoice, cardinal);
+				}
+				else{
+					printf("Invalid");
 				}
 				break;	
 			default:
